@@ -76,8 +76,11 @@ if len(sys.argv) == 2:
 
     for rounds in data["rounds"]:
         discord_lines.append("**" + rounds["round_name"] + "**")
+        game = 1
         for maps in rounds["stages"]:
-            discord_lines.append(maps)
+            discord_lines.append("Game " + str(game) + ": " + maps)
+            game += 1
+        game = 1
         discord_lines.append("")
 
     length = 0
