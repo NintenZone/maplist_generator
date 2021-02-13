@@ -3,7 +3,6 @@
     "tournament_config": {
         "num_players": 23,
         "round_config": {
-            "share_rounds_w_l": true,
             "default": {
                 "num_games": 3
             },

@@ -53,7 +53,8 @@ if len(sys.argv) == 2:
                                   quotechar='"', quoting=csv.QUOTE_MINIMAL)
         roundsWriter.writerow(rounds_header)
         for rounds in data["rounds"]:
-            next_row = [rounds["round_name"], rounds["round_name"], 0, rounds["num_games"]]
+          
+            next_row = [rounds["round_name"], rounds["round_name"], 0, rounds["num_games"], "Best of " + str(rounds["num_games"])]
             for stages in rounds["stages"]:
                 map_mode = stages.split(" on ")
                 next_row.append(map_mode[0])
@@ -81,7 +82,6 @@ if len(sys.argv) == 2:
             discord_lines.append("Game " + str(game) + ": " + maps)
             game += 1
         game = 1
-        discord_lines.append("")
 
     length = 0
 
@@ -102,4 +102,4 @@ else:
     print('You must run this program as follows:')
     print('python csv_gen.py <input_file.json>')
     print('')
-    print('If the JSON is not from maplist_gen.py, the program may exit unexpectedly.')
+    print('If the JSON is not from tournament_gen.py, the program may exit unexpectedly.')

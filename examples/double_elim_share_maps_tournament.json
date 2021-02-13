@@ -1,0 +1,28 @@
+{
+    "tournament_type": "double_elim",
+    "tournament_config": {
+        "num_players": 27,
+        "round_config": {
+            "share_rounds_w_l": true,
+            "default": {
+                "num_games": 3
+            },
+            "w_finals": {
+                "num_games": 5,
+                "map_quality": "high"
+            },
+            "l_semifinals": {
+                "num_games": 5
+            },
+            "l_finals": {
+                "num_games": 5,
+                "map_quality": "high"
+            },
+            "grand_finals": {
+                "num_games": 5,
+                "ignore_game_history": true,
+                "map_quality": "very high"
+            }
+        }
+    }
+}
